@@ -16,13 +16,14 @@ public class NumberGame {
 Scanner scanner = new Scanner(System.in);
 for(int i=10; i>0; i--){
     int guess = scanner.nextInt();
+
     if (randomNumber < guess) {
         System.out.println("It's smaller than " + guess + ".");
     }
-    if(randomNumber > guess){
+    else if(randomNumber > guess){
         System.out.println("It's bigger than " + guess + ".");
     }
-    if(randomNumber == guess){
+    else{
         hasWon = true;
         break;
     }
